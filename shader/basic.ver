@@ -1,0 +1,12 @@
+#version 330 core
+
+layout(location = 0) in vec4 pos;
+layout(location = 1) in vec2 tex;
+
+out vec2 ft;
+uniform mat4 trans=mat4(1.0f);
+
+void main(){
+	gl_Position = trans*pos;
+	ft = tex;
+}
